@@ -1,0 +1,29 @@
+<style>
+* { margin: 0;}
+
+textarea { border: 5px solid red; color: red; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+
+
+function send(){
+var msg = document.getElementById("msg");
+var textarea = document.getElementById("textarea");
+newMsg = msg.value;
+textarea.append(newMsg);
+}
+
+
+</script>
+
+
+
+
+<textarea id="textarea" style="border:red solid 3px; color: red; min-width:400px; min-height: 300px; max-width: 400px; max-height: 300px;" readonly></textarea>
+<br>
+<input id="msg" type="text" placeholder="Type text here" style="width:400px; height:20px;" title="Chat Box" required>
+
+<button id="btn" onclick="send()">Send <i class="fa fa-send-o"></i></button>
